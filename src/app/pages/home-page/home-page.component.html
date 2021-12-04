@@ -1,0 +1,70 @@
+<div class="row">
+  <div class="col-xl-3 col-lg-3 col-md-2 col-sm-2 col-xs-2"></div>
+  <div class="col-xl-5 col-lg-5 col-md-8 col-sm-8 col-xs-8">
+    <div *ngFor="let user of info; let i=index;">
+      <div>
+        <a routerLink="profile" routerLinkActive="active" class="bwd_user"> 
+          <img src={{user.picture.thumbnail}} alt="avatar" class="avatar">
+          <p>{{user.name.title}} {{user.name.first}} {{user.name.last}}</p>
+        </a>
+      </div>
+
+      <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+
+            <img src="https://picsum.photos/id/1066/200/200" class="d-block w-100" alt="default.png">
+          </div>
+          <div class="carousel-item">
+            <img src="https://picsum.photos/id/1067/200/200" class="d-block w-100" alt="default.png">
+          </div>
+          <div class="carousel-item">
+            <img src="https://picsum.photos/id/111/200/200" class="d-block w-100" alt="default.png">
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
+          data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
+          data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+      <div>
+        <div class="user_avatar">
+          <div style="display: flex;">
+            <li>
+              <a (click)="addLikes()" class="bwd_share">
+                <img src="assets/svg/heart.svg" alt="heart.svg" class="svg_image">
+              </a>
+            </li>
+            <li>
+              <a routerLink="comment" routerLinkActive="active" class="bwd_share">
+                <img src="assets/svg/chat.svg" alt="chat.svg" class="svg_image">
+  
+              </a>
+            </li> 
+          </div>
+          <div>
+            <li>
+              <share-buttons theme="circles-dark" [include]="['copy', 'facebook','twitter']" [showIcon]="true"
+                [showText]="false" url="https://randomuser.me" description="Instagram Clone Share" twitterAccount="rodrigokamada"
+                class="pt-0">
+              </share-buttons>
+            </li>
+          </div>
+
+        </div>
+      </div>
+      <div>
+        <p> {{showLikes}} likes</p>
+        <p>"Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit..."</p>
+      </div> 
+      <div id="bwd_space"></div> 
+
+    </div>
+    <div class="col-xl-3 col-lg-3 col-md-2 col-sm-2 col-xs-2"></div>
+  </div>

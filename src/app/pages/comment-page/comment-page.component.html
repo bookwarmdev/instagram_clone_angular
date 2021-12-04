@@ -1,0 +1,39 @@
+<div class="row">
+    <div class="col-xl-3 col-lg-3 col-md-2 col-sm-2 col-xs-2"></div>
+    <div class="col-xl-5 col-lg-5 col-md-8 col-sm-8 col-xs-8">
+        <div>
+            <div>
+                <div class="user_avatar">
+                    <img src="assets/images/Container.png" alt="avatar" class="avatar">
+                    <p>Bookwarmdev
+                        <span>to change the original size, you have to specify the width and height with CSS
+                            as you can see in the demo below. You can also update the original width and height
+                            directly.
+                        </span>
+                    </p>
+                </div>
+
+                <div class="user_avatar">
+                    <img src="assets/images/Container.png" alt="avatar" class="avatar">
+                    <div>
+                        <p>Bookwarmdev
+                            <span >{{comment}}</span>
+                        </p>
+                    </div>
+
+                </div> 
+                <div>
+                    <div class="input-group mb-3">
+                        <input type="text" class="form-control" placeholder="Add a comment.. "
+                            aria-label="Recipient's username" aria-describedby="button-addon2" [(ngModel)]="comment">
+                        <button class="btn btn-outline-secondary" type="button" id="button-addon2"
+                            (click)="send_comment()">Send</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+    <div class="col-xl-3 col-lg-3 col-md-2 col-sm-2 col-xs-2"></div>
+</div>
